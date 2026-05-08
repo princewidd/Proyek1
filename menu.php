@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
 $db = new database();
 $conn = $db->getConnection();
 
-$query = "SELECT * FROM menu ORDER BY Kategori, Nama_menu";
+$query = "SELECT * FROM menu ORDER BY Kategori, Stok DESC, Nama_menu";
 $stmt = $conn->prepare($query);
 $stmt->execute();
 $menus = $stmt->fetchAll();
@@ -93,6 +93,7 @@ $totalCartCount = getCartCount();
             echo "<div class='menu-info'>";
             echo "<h3>" . htmlspecialchars($menu['Nama_menu']) . "</h3>";
             echo "<p>Rp " . number_format($menu['Harga'], 0, ',', '.') . "</p>";
+            if ($menu['Stok'] == 0) echo "<small style='color:red;font-weight:bold;'> Stok Habis</small>";
             echo "</div>";
             
             
@@ -117,7 +118,11 @@ $totalCartCount = getCartCount();
             echo "<input type='hidden' name='menu_id' value='" . $menuId . "'>";
             echo "<input type='hidden' name='nama' value='" . htmlspecialchars($menu['Nama_menu'], ENT_QUOTES) . "'>";
             echo "<input type='hidden' name='harga' value='" . $menu['Harga'] . "'>";
-            echo "<button type='submit' class='btn-add'>+</button>";
+            if ($menu['Stok'] == 1) {
+                echo "<button type='submit' class='btn-add'>+</button>"; 
+            } else {
+                echo "<button type='button' class='btn-add' disabled style='opacity:0.4;cursor:not-allowed;'>+</button>";
+            }
             echo "</form>";
             
             echo "</div>";
