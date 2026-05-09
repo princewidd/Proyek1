@@ -43,7 +43,7 @@ $kategoriList = $pdo->query("SELECT DISTINCT Kategori FROM menu ORDER BY Kategor
     <table>
         <thead>
             <tr>
-                <th>#</th>
+                <th>No</th>
                 <th>Nama Menu</th>
                 <th>Kategori</th>
                 <th>Harga</th>
@@ -68,6 +68,7 @@ $kategoriList = $pdo->query("SELECT DISTINCT Kategori FROM menu ORDER BY Kategor
                             <?= $menu['Stok'] == 1 ? 'Habis' : 'Tersedia' ?>
                         </button>
                     </form>
+                    <a href="hapus.php?id=<?= $menu['ID_Menu'] ?>&nama=<?= urlencode($menu['Nama_menu']) ?>" class="btn-hapus">Hapus</a>
                 </td>
             </tr>
             <?php endforeach; ?>
