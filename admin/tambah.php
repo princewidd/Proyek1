@@ -63,7 +63,7 @@ $kategoriList = $pdo->query("SELECT DISTINCT Kategori FROM menu ORDER BY Kategor
                 <label>Harga (Rp)</label>
                 <input type="number" name="harga" placeholder="Contoh: 15000" min="1" value="<?= htmlspecialchars($_POST['harga'] ?? '') ?>" required>
             </div>
-            <button type="submit" class="btn-submit">💾 Simpan Menu</button>
+            <button type="submit" class="btn-submit">Simpan Menu</button>
         </form>
     </div>
 </div>
