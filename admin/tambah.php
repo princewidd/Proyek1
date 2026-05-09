@@ -30,43 +30,7 @@ $kategoriList = $pdo->query("SELECT DISTINCT Kategori FROM menu ORDER BY Kategor
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Menu</title>
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-        .form-card {
-            background: white;
-            border-radius: 12px;
-            padding: 28px;
-            box-shadow: 0 2px 10px rgba(255,20,147,0.1);
-            max-width: 480px;
-            margin: 20px auto;
-        }
-        .form-group { margin-bottom: 18px; }
-        label { display: block; margin-bottom: 6px; font-weight: bold; color: #555; }
-        input[type=text], input[type=number], select {
-            width: 100%;
-            padding: 10px 14px;
-            border: 1px solid #ffb6d9;
-            border-radius: 8px;
-            font-size: 14px;
-            outline: none;
-        }
-        input:focus, select:focus { border-color: #ff1493; }
-        .btn-submit {
-            width: 100%;
-            background-color: #ff1493;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            font-size: 15px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .btn-submit:hover { background-color: #cc0077; }
-        .back-link { display: inline-block; margin-bottom: 10px; color: #ff1493; text-decoration: none; }
-        .back-link:hover { text-decoration: underline; }
-        .alert-error { background: #f8d7da; color: #721c24; padding: 12px 16px; border-radius: 8px; margin-bottom: 16px; }
-        #kategori-baru-wrap { display: none; margin-top: 10px; }
-    </style>
+    <link rel="stylesheet" href="../css/admin/tambah.css">
 </head>
 <body>
 <div class="container">
