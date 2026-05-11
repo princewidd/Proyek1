@@ -10,6 +10,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nama  = trim($_POST['nama']);
     $kategori = trim($_POST['kategori_pilih'] === '__lain__' ? $_POST['kategori_baru'] : $_POST['kategori_pilih']);
     $harga = (int) $_POST['harga'];
+    $gambar = null;
+    if (!empty($_FILES['gambar']['name'])) {
+        $ext = pathinfo($_FILES['gambar']['name'], PATHINFO_EXTENSION);
+        $namaFile = uniqid() . '.' . $ext;
+        move_uploaded_file($_FILES['gambar']['tmp_name'], '../uploads/menu/' . $namaFile);
+        $gambar = $namaFile;
+    }
 
     if (!$nama || !$kategori || $harga <= 0) {
         $error = 'Semua field wajib diisi dan harga harus lebih dari 0.';
@@ -42,7 +49,7 @@ $kategoriList = $pdo->query("SELECT DISTINCT Kategori FROM menu ORDER BY Kategor
             <div class="alert-error">⚠️ <?= $error ?></div>
         <?php endif; ?>
 
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label>Nama Menu</label>
                 <input type="text" name="nama" placeholder="Contoh: Burger Spesial" value="<?= htmlspecialchars($_POST['nama'] ?? '') ?>" required>
@@ -62,6 +69,10 @@ $kategoriList = $pdo->query("SELECT DISTINCT Kategori FROM menu ORDER BY Kategor
             <div class="form-group">
                 <label>Harga (Rp)</label>
                 <input type="number" name="harga" placeholder="Contoh: 15000" min="1" value="<?= htmlspecialchars($_POST['harga'] ?? '') ?>" required>
+            </div>
+            <div class="form-group">
+                <label>Gambar Menu</label>
+                <input type="file" name="gambar" accept="image/*">
             </div>
             <button type="submit" class="btn-submit">Simpan Menu</button>
         </form>

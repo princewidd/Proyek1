@@ -18,6 +18,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nama     = trim($_POST['nama']);
     $kategori = trim($_POST['kategori_pilih'] === '__lain__' ? $_POST['kategori_baru'] : $_POST['kategori_pilih']);
     $harga    = (int) $_POST['harga'];
+    $gambar = $menu['Gambar'];
+    if (!empty($_FILES['gambar']['name'])) {
+        $ext = pathinfo($_FILES['gambar']['name'], PATHINFO_EXTENSION);
+        $namaFile = uniqid() . '.' . $ext;
+        move_uploaded_file($_FILES['gambar']['tmp_name'], '../uploads/menu/' . $namaFile);
+        $gambar = $namaFile;
+    }
 
     if (!$nama || !$kategori || $harga <= 0) {
         $error = 'Semua field wajib diisi dan harga harus lebih dari 0.';
@@ -52,7 +59,7 @@ $isKatBaru = !in_array($kategoriMenu, $kategoriList);
             <div class="alert-error">⚠️ <?= $error ?></div>
         <?php endif; ?>
 
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label>Nama Menu</label>
                 <input type="text" name="nama" value="<?= htmlspecialchars($_POST['nama'] ?? $menu['Nama_menu']) ?>" required>
@@ -74,6 +81,14 @@ $isKatBaru = !in_array($kategoriMenu, $kategoriList);
             <div class="form-group">
                 <label>Harga (Rp)</label>
                 <input type="number" name="harga" value="<?= htmlspecialchars($_POST['harga'] ?? (int)$menu['Harga']) ?>" min="1" required>
+            </div>
+            <div class="form-group">
+                <label>Gambar Menu</label>
+                <?php if ($menu['Gambar']): ?>
+                    <img src="../uploads/menu/<?= $menu['Gambar'] ?>" style="width:80px; border-radius:8px; margin-bottom:8px; display:block;">
+                <?php endif; ?>
+                <input type="file" name="gambar" accept="image/*">
+                <small style="color:#999;">Kosongkan jika tidak ingin mengganti gambar</small>
             </div>
             <button type="submit" class="btn-submit">Simpan Perubahan</button>
         </form>
