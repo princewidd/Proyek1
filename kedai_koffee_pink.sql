@@ -58,35 +58,37 @@ CREATE TABLE `menu` (
   `ID_Menu` int NOT NULL,
   `Nama_menu` varchar(100) NOT NULL,
   `Kategori` varchar(50) DEFAULT NULL,
-  `Harga` decimal(10,2) NOT NULL
+  `Harga` decimal(10,2) NOT NULL,
+  `Stok` tinyint(1) NOT NULL DEFAULT '1',
+  `Gambar` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `menu`
 --
 
-INSERT INTO `menu` (`ID_Menu`, `Nama_menu`, `Kategori`, `Harga`) VALUES
-(1, 'Burger Beef', 'Burger', '5000.00'),
-(2, 'Burger Daging', 'Burger', '8000.00'),
-(3, 'Kebab Kecil', 'Kebab', '5000.00'),
-(4, 'Kebab Sedang', 'Kebab', '8000.00'),
-(5, 'Kebab Besar', 'Kebab', '10000.00'),
-(6, 'Kebab Spesial', 'Kebab', '15000.00'),
-(7, 'Kebab Super Jumbo', 'Kebab', '17000.00'),
-(8, 'Corndog Original', 'Corndog', '5000.00'),
-(9, 'Corndog + Toping', 'Corndog', '7000.00'),
-(10, 'Lumpia Telur', 'Lainnya', '5000.00'),
-(11, 'Kentang Tornado', 'Kentang Tornado', '5000.00'),
-(12, 'Roti Bakar Strawberi', 'Roti Bakar', '14000.00'),
-(13, 'Roti Bakar Blueberi', 'Roti Bakar', '14000.00'),
-(14, 'Roti Bakar Nanas', 'Roti Bakar', '14000.00'),
-(15, 'Roti Bakar Coklat', 'Roti Bakar', '16000.00'),
-(16, 'Roti Bakar Kacang', 'Roti Bakar', '16000.00'),
-(17, 'Roti Bakar Choco Cruncy', 'Roti Bakar', '22000.00'),
-(18, 'Roti Bakar Tiramisu Cruncy', 'Roti Bakar', '22000.00'),
-(19, 'Roti Bakar Blueberi Zam', 'Roti Bakar', '22000.00'),
-(20, 'Roti Bakar Strawberi Zam', 'Roti Bakar', '22000.00'),
-(21, 'Roti Bakar Chesse Cruncy', 'Roti Bakar', '24000.00');
+INSERT INTO `menu` (`ID_Menu`, `Nama_menu`, `Kategori`, `Harga`, `Stok`, `Gambar`) VALUES
+(1, 'Burger Beef', 'Burger', '5000.00', 1, NULL),
+(2, 'Burger Daging', 'Burger', '8000.00', 1, NULL),
+(3, 'Kebab Kecil', 'Kebab', '5000.00', 1, NULL),
+(4, 'Kebab Sedang', 'Kebab', '8000.00', 1, NULL),
+(5, 'Kebab Besar', 'Kebab', '10000.00', 1, NULL),
+(6, 'Kebab Spesial', 'Kebab', '15000.00', 1, NULL),
+(7, 'Kebab Super Jumbo', 'Kebab', '17000.00', 1, NULL),
+(8, 'Corndog Original', 'Corndog', '5000.00', 1, NULL),
+(9, 'Corndog + Toping', 'Corndog', '7000.00', 1, NULL),
+(10, 'Lumpia Telur', 'Lainnya', '5000.00', 1, NULL),
+(11, 'Kentang Tornado', 'Kentang Tornado', '5000.00', 1, NULL),
+(12, 'Roti Bakar Strawberi', 'Roti Bakar', '14000.00', 1, NULL),
+(13, 'Roti Bakar Blueberi', 'Roti Bakar', '14000.00', 1, NULL),
+(14, 'Roti Bakar Nanas', 'Roti Bakar', '14000.00', 1, NULL),
+(15, 'Roti Bakar Coklat', 'Roti Bakar', '16000.00', 1, NULL),
+(16, 'Roti Bakar Kacang', 'Roti Bakar', '16000.00', 1, NULL),
+(17, 'Roti Bakar Choco Cruncy', 'Roti Bakar', '22000.00', 1, NULL),
+(18, 'Roti Bakar Tiramisu Cruncy', 'Roti Bakar', '22000.00', 1, NULL),
+(19, 'Roti Bakar Blueberi Zam', 'Roti Bakar', '22000.00', 1, NULL),
+(20, 'Roti Bakar Strawberi Zam', 'Roti Bakar', '22000.00', 1, NULL),
+(21, 'Roti Bakar Chesse Cruncy', 'Roti Bakar', '24000.00', 1, NULL);
 
 -- --------------------------------------------------------
 

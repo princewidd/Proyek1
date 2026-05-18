@@ -1,4 +1,5 @@
 <?php
+require_once 'auth.php';
 require_once '../models/Database.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST' || empty($_POST['id'])) {

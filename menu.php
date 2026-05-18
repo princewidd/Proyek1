@@ -93,7 +93,7 @@ $totalCartCount = getCartCount();
             if (!empty($menu['Gambar'])) {
                 echo "<img src='uploads/menu/" . $menu['Gambar'] . "' style='width:80px; height:80px; object-fit:cover; border-radius:8px; flex-shrink:0;'>";
             } else {
-                echo "<div style='width:80px; height:80px; background:#ffe6f0; border-radius:8px; flex-shrink:0;'></div>";
+                echo "<div style='width:80px; height:80px; background:#FFE4EC; border-radius:8px; flex-shrink:0;'></div>";
             }
             echo "<div class='menu-info'>";
             echo "<h3>" . htmlspecialchars($menu['Nama_menu']) . "</h3>";

@@ -1,5 +1,5 @@
 .kategori {
-  background: #ff1493;
+  background: #fd0053;
   color: white;
   padding: 10px 15px;
   margin: 20px 0 10px 0;
@@ -13,11 +13,11 @@
 
 .qty {
   font-weight: bold;
-  color: #e91e63;
+  color: #fd0053;
 }
 
 .btn-add {
-  background-color: #e91e63;
+  background-color: #fd0053;
   color: white;
   border: none;
   border-radius: 50%;
@@ -29,7 +29,7 @@
 }
 
 .btn-add:hover {
-  background-color: #c2185b;
+  background-color: #C2003F;
 }
 
 .btn-minus {
@@ -53,7 +53,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #e91e63;
+  background-color: #fd0053;
   color: white;
   padding: 15px;
   text-align: center;
@@ -67,7 +67,7 @@
 
 .btn-order {
   background-color: white;
-  color: #e91e63;
+  color: #fd0053;
   padding: 10px 30px;
   text-decoration: none;
   border-radius: 5px;
@@ -107,7 +107,7 @@
 }
 
 .menu-info h3 {
-  color: #ff1493;
+  color: #fd0053;
   margin-bottom: 5px;
   font-size: 1.1em;
   text-align: left;
@@ -139,7 +139,7 @@
 }
 
 .kategori:hover {
-  background-color: #d81b60;
+  background-color: #C2003F;
 }
 
 .kategori h2 {
@@ -161,6 +161,6 @@
 
 .menu-list {
   display: none;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 10px;
 }

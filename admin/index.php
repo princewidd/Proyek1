@@ -1,4 +1,5 @@
 <?php
+require_once 'auth.php';
 require_once '../models/Database.php';
 
 $db = new database();
@@ -22,7 +23,10 @@ $kategoriList = $pdo->query("SELECT DISTINCT Kategori FROM menu ORDER BY Kategor
 <div class="container">
     <div class="admin-header">
         <h1 style="padding:0;">Kelola Menu</h1>
+        <div style="display:flex; gap:10px;">
         <a href="tambah.php" class="btn-tambah">+ Tambah Menu</a>
+        <a href="logout.php" class="btn-tambah" style="background:#c0392b;">Logout</a>
+        </div>
     </div>
 
     <?php if (isset($_GET['success'])): ?>

@@ -20,18 +20,18 @@ input[type="number"],
 select {
   width: 100%;
   padding: 10px 14px;
-  border: 1px solid #ffb6d9;
+  border: 1px solid #FFE4EC;
   border-radius: 8px;
   font-size: 14px;
   outline: none;
 }
 input:focus,
 select:focus {
-  border-color: #ff1493;
+  border-color: #FD0053;
 }
 .btn-submit {
   width: 100%;
-  background-color: #ff1493;
+  background-color: #FD0053;
   color: white;
   padding: 12px;
   border: none;
@@ -41,12 +41,12 @@ select:focus {
   cursor: pointer;
 }
 .btn-submit:hover {
-  background-color: #cc0077;
+  background-color: #C2003F;
 }
 .back-link {
   display: inline-block;
   margin-bottom: 10px;
-  color: #ff1493;
+  color: #FD0053;
   text-decoration: none;
 }
 .back-link:hover {
@@ -62,4 +62,17 @@ select:focus {
 #kategori-baru-wrap {
   display: none;
   margin-top: 10px;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #FFE4EC;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+input[type="password"]:focus {
+    border-color: #FD0053;
 }

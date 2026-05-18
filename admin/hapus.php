@@ -1,4 +1,5 @@
 <?php
+require_once 'auth.php';
 require_once '../models/Database.php';
 
 $id = $_GET['id'] ?? null;
@@ -27,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="container">
         <div class="form-card" style=text-align:center;">
-            <h2 style="color:#ff1493; margin-bottom:10px;">Hapus Menu</h2>
+            <h2 style="color:#FD0053; margin-bottom:10px;">Hapus Menu</h2>
             <p style="margin-bottom:24px;">Yakin mau hapus <strong><?= htmlspecialchars($nama) ?></strong> dari daftar menu?</p>
             <form method="POST" action="hapus.php?id=<?= $id ?>&nama=<?= urlencode($nama) ?>">
                 <button type="submit" class="btn-submit" style="background:#e74c3c; margin-bottom:10px;">Ya, Hapus</button>

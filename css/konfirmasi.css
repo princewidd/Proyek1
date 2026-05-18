@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #ffe3ed; 
+    background: #FFE4EC; 
     margin: 0;
     padding: 20px;
     display: flex;
@@ -9,7 +9,7 @@ body {
 }
 
 .header-banner {
-    background: #e81d62; 
+    background: #FD0053; 
     color: white;
     padding: 15px 40px;
     border-radius: 50px;
@@ -31,7 +31,7 @@ body {
 }
 
 .icon-box {
-    background-color: #e81d62; 
+    background-color: #FD0053; 
     width: 120px;
     height: 120px;
     border-radius: 20px;
@@ -53,14 +53,14 @@ body {
 }
 
 .checkmark {
-    color: #e81d62; 
+    color: #FD0053; 
     font-size: 40px;
     font-weight: bold;
     margin-top: 5px;
 }
 
 .success-text {
-    color: #e81d62; 
+    color: #FD0053; 
     font-size: 24px;
     font-weight: 800;
     margin-bottom: 10px;
@@ -94,8 +94,8 @@ body {
 
 .btn-home {
     background: none;
-    border: 2px solid #e81d62; 
-    color: #e81d62;
+    border: 2px solid #FD0053; 
+    color: #FD0053;
     padding: 10px 25px;
     border-radius: 20px;
     font-weight: bold;
@@ -105,6 +105,6 @@ body {
 }
 
 .btn-home:hover {
-    background: #e81d62; 
+    background: #FD0053; 
     color: white;
 }
