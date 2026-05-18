@@ -110,6 +110,7 @@
   color: #ff1493;
   margin-bottom: 5px;
   font-size: 1.1em;
+  text-align: left;
 }
 
 .menu-info p {
@@ -160,4 +161,6 @@
 
 .menu-list {
   display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }

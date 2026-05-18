@@ -98,7 +98,7 @@ $totalCartCount = getCartCount();
             echo "<div class='menu-info'>";
             echo "<h3>" . htmlspecialchars($menu['Nama_menu']) . "</h3>";
             echo "<p>Rp " . number_format($menu['Harga'], 0, ',', '.') . "</p>";
-            if ($menu['Stok'] == 0) echo "<small style='color:red;font-weight:bold;'> Stok Habis</small>";
+            if ($menu['Stok'] == 0) echo "<small style='color:red;font-weight:bold; margin-top:5px'> Stok Habis</small>";
             echo "</div>";
             
             
@@ -150,10 +150,10 @@ $totalCartCount = getCartCount();
         function toggleCategory(element) {
             element.classList.toggle('open');
             var content = element.nextElementSibling;
-            if (content.style.display === "block") {
+            if (content.style.display === "grid") {
                 content.style.display = "none";
             } else {
-                content.style.display = "block";
+                content.style.display = "grid";
             }
         }
 

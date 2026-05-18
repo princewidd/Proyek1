@@ -20,7 +20,6 @@ $kategoriList = $pdo->query("SELECT DISTINCT Kategori FROM menu ORDER BY Kategor
 </head>
 <body>
 <div class="container">
-    <a href="../menu.php" class="back-link">← Kembali ke Menu</a>
     <div class="admin-header">
         <h1 style="padding:0;">Kelola Menu</h1>
         <a href="tambah.php" class="btn-tambah">+ Tambah Menu</a>
