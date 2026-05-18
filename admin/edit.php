@@ -30,8 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!$nama || !$kategori || $harga <= 0) {
         $error = 'Semua field wajib diisi dan harga harus lebih dari 0.';
     } else {
-        $stmt = $pdo->prepare("UPDATE menu SET Nama_menu=?, Kategori=?, Harga=? WHERE ID_Menu=?");
-        $stmt->execute([$nama, $kategori, $harga, $id]);
+        $stmt = $pdo->prepare("UPDATE menu SET Nama_menu=?, Kategori=?, Harga=?, Gambar=? WHERE ID_Menu=?");
+        $stmt->execute([$nama, $kategori, $harga, $gambar, $id]);
         header('Location: index.php?success=edit');
         exit;
     }

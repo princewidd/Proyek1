@@ -5,7 +5,7 @@
   padding: 10px 0 20px;
 }
 .btn-tambah {
-  background-color: #ff1493;
+  background-color: #fd0053;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -15,7 +15,7 @@
   font-size: 14px;
 }
 .btn-tambah:hover {
-  background-color: #cc0077;
+  background-color: #C2003F;
 }
 table {
   width: 100%;
@@ -26,24 +26,24 @@ table {
   box-shadow: 0 2px 10px rgba(255, 20, 147, 0.1);
 }
 thead {
-  background-color: #ff1493;
+  background-color: #fd0053;
   color: white;
 }
 th,
 td {
   padding: 12px 8px;
   text-align: left;
-  border-bottom: 1px solid #ffe6f0;
+  border-bottom: 1px solid #FFE4EC;
 }
 tr:last-child td {
   border-bottom: none;
 }
 tr:hover td {
-  background-color: #fff0f7;
+  background-color: #FFE4EC;
 }
 .badge {
-  background-color: #ffe6f0;
-  color: #ff1493;
+  background-color: #FFE4EC;
+  color: #fd0053;
   padding: 3px 10px;
   border-radius: 20px;
   font-size: 12px;
@@ -54,22 +54,22 @@ tr:hover td {
   gap: 8px;
 }
 .btn-edit {
-  background-color: #fff;
-  color: #ff1493;
-  border: 1px solid#ff1493;
+  background-color: #fd0053;
+  color: #FD0053;
+  border: 1px solid#FD0053;
   padding: 6px 14px;
   border-radius: 6px;
   text-decoration: none;
   font-size: 13px;
 }
 .btn-edit:hover {
-  background-color: #ff1493;
+  background-color: #FD0053;
   color: white;
 }
 .btn-hapus {
   background-color: #fff;
-  color: #ff1493;
-  border: 1px solid #ff1493;
+  color: #FD0053;
+  border: 1px solid #FD0053;
   padding: 6px 14px;
   border-radius: 6px;
   font-size: 13px;
@@ -77,7 +77,7 @@ tr:hover td {
   text-decoration: none;
 }
 .btn-hapus:hover {
-  background-color: #ff1493;
+  background-color: #FD0053;
   color: white;
 }
 .alert-success {
@@ -90,7 +90,7 @@ tr:hover td {
 .back-link {
   display: inline-block;
   margin-bottom: 10px;
-  color: #ff1493;
+  color: #FD0053;
   text-decoration: none;
   font-size: 14px;
 }
@@ -99,15 +99,15 @@ tr:hover td {
 }
 .btn-nonaktif {
   background-color: #fff;
-  color: #ff1493;
-  border: 1px solid #ff1493;
+  color: #fd0053;
+  border: 1px solid #fd0053;
   padding: 6px 14px;
   border-radius: 6px;
   font-size: 13px;
   cursor: pointer;
 }
 .btn-nonaktif:hover {
-  background-color: #ff1493;
+  background-color: #FD0053;
   color: white;
 }
 .btn-aktif {

@@ -22,8 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!$nama || !$kategori || $harga <= 0) {
         $error = 'Semua field wajib diisi dan harga harus lebih dari 0.';
     } else {
-        $stmt = $pdo->prepare("INSERT INTO menu (Nama_menu, Kategori, Harga) VALUES (?, ?, ?)");
-        $stmt->execute([$nama, $kategori, $harga]);
+        $stmt = $pdo->prepare("INSERT INTO menu (Nama_menu, Kategori, Harga, Gambar) VALUES (?, ?, ?, ?)");
+        $stmt->execute([$nama, $kategori, $harga, $gambar]);
         header('Location: index.php?success=tambah');
         exit;
     }
