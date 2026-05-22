@@ -63,7 +63,7 @@ $totalHarga = 0;
     <link rel="stylesheet" href="css/menu.css"> 
 </head>
 <body>
-    <div class="container">
+    <div class="container cart-page">
         <h1>Keranjang Pesanan</h1>
         
         <?php if (empty($cart)): ?>

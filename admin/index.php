@@ -8,6 +8,7 @@ $pdo = $db->getConnection();
 $stmt = $pdo->query("SELECT * FROM menu ORDER BY Stok DESC, Kategori, Nama_menu");
 $menus = $stmt->fetchAll();
 
+$totalMenu = $pdo->query("SELECT COUNT(*) FROM menu")->fetchColumn();
 $kategoriList = $pdo->query("SELECT DISTINCT Kategori FROM menu ORDER BY Kategori")->fetchAll(PDO::FETCH_COLUMN);
 ?>
 <!DOCTYPE html>
@@ -16,13 +17,14 @@ $kategoriList = $pdo->query("SELECT DISTINCT Kategori FROM menu ORDER BY Kategor
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - Kelola Menu</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style admin.css">
     <link rel="stylesheet" href="../css/admin/index.css">
 </head>
 <body>
 <div class="container">
     <div class="admin-header">
         <h1 style="padding:0;">Kelola Menu</h1>
+        <p style="color:#FD0053; font-size:15px; font-weight:bold;">Total menu: <?= $totalMenu ?> menu</p>
         <div style="display:flex; gap:10px;">
         <a href="tambah.php" class="btn-tambah">+ Tambah Menu</a>
         <a href="logout.php" class="btn-tambah" style="background:#c0392b;">Logout</a>

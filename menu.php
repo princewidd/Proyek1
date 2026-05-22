@@ -63,7 +63,7 @@ $totalCartCount = getCartCount();
     <link rel="stylesheet" href="css/menu.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container menu-page">
         <h1>Menu Kedai Koffee Pink</h1>
 
         <?php

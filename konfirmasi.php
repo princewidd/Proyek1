@@ -40,8 +40,8 @@ $stmt_pesanan = $conn->prepare("INSERT INTO pesanan (id_pelanggan, tanggal, tota
 $stmt_pesanan->execute([$id_pelanggan, $tanggal_sekarang]);
 $id_pesanan = $conn->lastInsertId();
 
-$nomor_wa_kasir = "6289507273413"; 
-$pesan_wa = "Halo Kasir Koffee Pink!%0AAda pesanan baru!%0A%0A*Nama:* " . $nama_pelanggan . "%0A%0A*Detail Pesanan:*%0A";
+$nomor_wa_kasir = "6283890254017"; 
+$pesan_wa = "Halo Kasir Koffee Pink!%0AAda pesanan baru!%0A%0A*Nama:* " . urlencode($nama_pelanggan) . "%0A%0A*Detail Pesanan:*%0A";
 
 
 $stmt_detail = $conn->prepare("INSERT INTO detail_pesanan (id_pesanan, id_menu, qty, harga_satuan) VALUES (?, ?, ?, ?)");
@@ -60,7 +60,7 @@ foreach ($cart as $id_menu => $item) {
     $stmt_detail->execute([$id_pesanan, $id_menu, $jumlah, $harga_satuan]);
 
     
-    $pesan_wa .= "- " . $jumlah . "x " . $nama_menu . " (Rp " . number_format($subtotal, 0, ',', '.') . ")%0A";
+    $pesan_wa .= "- " . $jumlah . "x " . urlencode($nama_menu) . " (Rp " . number_format($subtotal, 0, ',', '.') . ")%0A";
 }
 
 
@@ -69,7 +69,7 @@ $stmt_update->execute([$total_harga_semua, $id_pesanan]);
 
 
 $pesan_wa .= "%0A*Total Pembayaran: Rp " . number_format($total_harga_semua, 0, ',', '.') . "*%0AMohon segera disiapkan, terima kasih!";
-$link_wa = "https://wa.me/6283890254017" . $nomor_wa_kasir . "?text=" . $pesan_wa;
+$link_wa = "https://wa.me/" . $nomor_wa_kasir . "?text=" . $pesan_wa;
 
 
 $_SESSION['cart'] = [];

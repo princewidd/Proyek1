@@ -13,12 +13,11 @@ body {
 h1 {
   color: #fd0053;
   text-align: center;
-  padding: 25px;
-  padding-top: 40px;
+  padding: 20px;
 }
 
 .container {
-  max-width: 430px;
+  max-width: 800px;
   margin: auto;
   padding: 20px;
 }

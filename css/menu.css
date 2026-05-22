@@ -125,6 +125,32 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
+/* Background khusus untuk halaman menu - 2 layer */
+.menu-page {
+  background-image: 
+    url('../1.png'),           /* Layer atas: gambar makanan */
+    url('../2.png');           /* Layer bawah: pink watercolor repeat */
+  background-size: 
+    100% auto,                 /* Gambar makanan full width */
+    100% auto;                 /* Pink watercolor full width */
+  background-position: 
+    top center,                /* Gambar makanan di atas */
+    top center;                /* Pink mulai dari atas juga */
+  background-repeat: 
+    no-repeat,                 /* Gambar makanan gak repeat */
+    repeat-y;                  /* Pink repeat ke bawah */
+  min-height: 100vh;
+}
+
+/* Penyesuaian untuk laptop/desktop */
+@media (min-width: 769px) {
+  .menu-page {
+    background-size: 
+      contain,                 /* Gambar makanan contain */
+      100% auto;               /* Pink tetap full width */
+  }
+}
+
 .container {
   padding-bottom: 120px;
 }
